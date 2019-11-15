@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+    const user=['人生若只如初见', '何事秋风悲画扇', '相见不如怀念']
+    const user2 = ['彼岸花开彼岸', '山有木兮木有枝', '此恨不关风和月']
+    function list (data) {
+        return data.map((item,index)=> {
+            return <li key={index}>{item}</li>
+        })
+    }
+        ReactDOM.render(
+            <div>
+              <ul>
+              {list(user)}
+
+              </ul>
+              <ul>
+              {list(user2)}
+              </ul>
+              
+            </div>,
+            document.getElementById('app')
+        );
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id='app'>
+        <p></p>
+    </div>
+    <script src='./kvue.js'></script>
+    <script>
+        let app = new kvue({
+            el:'#app',
+            data:{
+              test: '彼岸花，花开彼岸',
+              foo: '人生若只如初见'  
+            }
+        })
+        app.test = '你已消失在茫茫人海，再也找不见'
+    </script>
+    
+</body>
+</html>

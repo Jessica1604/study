@@ -1,0 +1,54 @@
+.listWrap {
+    width:400px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 6px #ccc;
+    margin: 0 auto;
+    margin-top:40px;
+    padding: 20px;
+    font-size:14px;
+}
+.header h3{
+    margin:0;
+    padding: 0;
+    text-align:center;
+}
+.header .btnList{
+    text-align:center;
+    
+}
+.header input{
+    margin-right:10px;
+}
+.table {
+    margin-top:10px;
+}
+.table .checkAll, .table .save, .table .delete{
+    width: 80px;
+}
+.table .long{
+    width:100px;
+}
+.table td{
+    text-align:center;
+}
+.footer{
+    margin-top:10px;
+}
+.footer .info{
+    width:100%;
+    height:20px;
+    font-size:14px;
+}
+.footer .left{
+    float:left
+}
+.footer .right{
+    float:right;
+    color:#333;
+    font-size:12px;
+}
+.footer input{
+    margin-right:5px;
+}
