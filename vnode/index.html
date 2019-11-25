@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    
+</body>
+<script>
+    let div = createElement('div',{id: 'test'},[
+       createElement('p',{class: 'text'},['节点1'])
+    ])
+    console.log(div)
+    function createElement(tag, data, children) {
+        let flag 
+        if (typeof tag === 'string') {
+            flag = 'HTML'
+        } else if (typeof tag === 'function') {
+            flag = 'COMPONENT'
+        } else {
+            flag = 'TEXT'
+        }
+        let childrenFlag
+        if (children === null){
+            childrenFlag = ''
+        } else if(Array.isArray(children)){
+            let length = Array.isArray(children).length
+            if (length ===0){
+                childrenFlag = 'EMPTY'
+            } else {
+                childrenFlag = 'MULTIPLY'  
+            }
+        } else {
+            childrenFlag = 'TEXT'
+        }
+        return {
+            tagType: flag,
+            tag: tag,
+            data: data,
+            children: children
+        }
+    }
+</script>
+</html>
